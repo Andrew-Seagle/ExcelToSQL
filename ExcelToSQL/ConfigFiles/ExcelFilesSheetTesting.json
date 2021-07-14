@@ -1,0 +1,47 @@
+{
+  "for_the_king": {
+    "Abilities": {
+      "Files": [
+        "Testing",
+        "SQLConfig"
+      ],
+      "Sheets": [
+        {
+          "SheetName": "Passive",
+          "Classes": [
+            "Ability",
+            "AbilitySCPassive"
+          ]
+        },
+        {
+          "SheetName": "Active",
+          "Classes": [
+            "Ability",
+            "AbilitySCActive"
+          ]
+        },
+        {
+          "SheetName": "Attack",
+          "Classes": [
+            "Ability",
+            "AbilitySCAttack"
+          ]
+        },
+        {
+          "SheetName": "Buff",
+          "Classes": [
+            "Ability",
+            "AbilitySCBuff"
+          ]
+        },
+        {
+          "SheetName": "Debuff",
+          "Classes": [
+            "Ability",
+            "AbilitySCDebuff"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "bestbuy": "Server=localhost;Database=bestbuy;uid=root;Pwd=password;",
+    "for_the_king": "Server=localhost;Database=for_the_king;uid=root;Pwd=password;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

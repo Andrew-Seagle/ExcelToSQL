@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelToSQL", "ExcelToSQL\ExcelToSQL.csproj", "{CEA81891-8318-4C6A-8625-9CBB5A33C3F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForTheKingDB", "ForTheKingDB\ForTheKingDB.csproj", "{8702E1ED-4B2E-4B6B-86C0-A8A36CE0AFF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA81891-8318-4C6A-8625-9CBB5A33C3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA81891-8318-4C6A-8625-9CBB5A33C3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA81891-8318-4C6A-8625-9CBB5A33C3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA81891-8318-4C6A-8625-9CBB5A33C3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8702E1ED-4B2E-4B6B-86C0-A8A36CE0AFF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8702E1ED-4B2E-4B6B-86C0-A8A36CE0AFF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8702E1ED-4B2E-4B6B-86C0-A8A36CE0AFF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8702E1ED-4B2E-4B6B-86C0-A8A36CE0AFF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8629EEF5-DDBC-49B3-8536-F4BFE86E6228}
+	EndGlobalSection
+EndGlobal
