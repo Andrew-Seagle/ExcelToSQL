@@ -74,23 +74,24 @@ namespace ExcelToSQL
             build.AddConfig("ExcelFilesSheetInfo.json", "FTK Abilities")
                  .AddConfig(testConfig)
                  .AutoAddFiles("Abilities")
-                 .AddFile(testFile, "Config 2");
-            //.AutoAddAllFiles();
+                 .AddFile(testFile, "Config 2")
+                 .Build();
 
             var bob = new ExcelBuilder("for_the_king");
             bob.AddConfig(config)
-               .AutoAddAllFiles();
+               .AutoAddAllFiles()
+               .Build();
 
             var groupBuild = new ExcelBuilder("for_the_king");
+            groupBuild.AddConfig(testConfig, "Test Config")
+                      .AddConfig("ExcelFilesSheetInfo.json")
+                      .AutoAddAllFiles()
+                      .Build();
 
-
-            var groupActor = groupBuild.AddConfig(testConfig, "Test Config")
-                                       .AddConfig("ExcelFilesSheetInfo.json")
-                                       .AutoAddAllFiles();
-            //.Build();
+            var groupActor = new GroupActor(sqlActor, groupBuild);
 
             Console.WriteLine("--------");
-            //groupActor.TestMethod();
+            groupActor.TestMethod();
             Console.WriteLine("--------");
 
             var builderList = new List<ExcelBuilder>();

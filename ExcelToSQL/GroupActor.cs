@@ -10,12 +10,17 @@ namespace ExcelToSQL
     {
         // TODO: Add logic for priority insertion
         private SQLActor _actor;
+        private ExcelBuilder _builder;
 
         public Dictionary<string, List<ExcelEnum>> ExcelEnumCollection;
 
-        public GroupActor(SQLActor actor)
+        public GroupActor(SQLActor actor, ExcelBuilder builder)
         {
             this._actor = actor;
+
+            // TODO: Validate that builder is actually built
+            this._builder = builder;
+            this.ExcelEnumCollection = _builder.ExcelEnumCollection;
         }
 
         public void GroupFill()

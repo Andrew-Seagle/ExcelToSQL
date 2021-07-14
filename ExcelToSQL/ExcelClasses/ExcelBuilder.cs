@@ -13,6 +13,11 @@ namespace ExcelToSQL.ExcelClasses
         private string _databaseName;
         private string _defaultConfig;
         private IEnumerable<Tuple<IEnumerable<IMySQLTable>, IEnumerable<SingleColumn>>> _classPairs;
+        private bool isBuilt = false;
+
+        // TODO: More validation logic needed
+        public Dictionary<string, List<ExcelEnum>> ExcelEnumCollection { get => _excelEnumCollection; }
+        public bool IsBuilt { get; set; }
 
         public ExcelBuilder(string databaseName)
         {
@@ -199,11 +204,11 @@ namespace ExcelToSQL.ExcelClasses
             return this;
         }
 
-        public void Build(GroupActor groupActor)
+        public void Build()
         {
             // TODO: Add final validation?
             CreateExcelEnumsForFiles();
-
+            IsBuilt = true;
         }
 
         private void CreateExcelEnumsForFiles()
