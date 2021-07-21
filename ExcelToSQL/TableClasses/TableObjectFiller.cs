@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using System.Collections.Generic;
-using ExcelToSQL.SQLClasses;
+using ExcelToSQL.MySQLClasses;
 using ExcelToSQL.ExcelClasses;
 using ExcelToSQL.CustomAttributes;
 

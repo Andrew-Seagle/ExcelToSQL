@@ -17,12 +17,14 @@ namespace ExcelToSQL.ExcelClasses
 
         public string FileName { get; }
         public string TableGroup { get; }
+        public List<string> ClassNames { get; set; }
 
         public ExcelEnum(ExcelFile file)
         {
             this._file = file;
             FileName = _file.FileName;
             TableGroup = _file.TableGroup;
+            ClassNames = _file.ClassNames;
         }
 
         public IEnumerable<T> CreateEnum<T>(string sheetName, string columnName = "") where T : new()

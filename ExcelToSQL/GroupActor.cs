@@ -1,8 +1,9 @@
 ﻿using ExcelToSQL.ExcelClasses;
-using ExcelToSQL.SQLClasses;
+using ExcelToSQL.MySQLClasses;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+
 
 namespace ExcelToSQL
 {
@@ -39,6 +40,17 @@ namespace ExcelToSQL
                     Console.WriteLine($"   --- {exEnum.FileName}");
                 }
             }
+
+            Console.WriteLine("++++++++++++++++++");
+
+            var objArray = PrioritySorter.PrioritySort(_actor.DatabaseName, ExcelEnumCollection);
+
+            foreach (var obj in objArray)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine("++++++++++++++++++");
         }
     }
 }

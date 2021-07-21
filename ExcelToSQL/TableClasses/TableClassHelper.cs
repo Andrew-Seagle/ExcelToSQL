@@ -45,8 +45,11 @@ namespace ExcelToSQL.TableClasses
             var interfaceType = Type.GetType($"{Pathing.TableNS}.{interfaceName}");
 
             var classTypes = interfaceType.Assembly.GetTypes();
-            var classType = classTypes.Where(t => t.Namespace.Contains(databaseName))
-                                      .Single(t => t.Namespace.Contains(className));
+            var classType = classTypes.Where(t => t.FullName != null)
+                                      .Where(t => t.FullName.Contains(databaseName))
+                                      .Where(t => t.FullName.Contains(className))
+                                      .OrderBy(t => t.FullName.Substring(t.FullName.LastIndexOf('.') + 1).Length)
+                                      .First();
 
             return classType;
         }

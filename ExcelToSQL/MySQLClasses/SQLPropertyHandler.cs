@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace ExcelToSQL.SQLClasses
+namespace ExcelToSQL.MySQLClasses
 {
     public static class SQLPropertyHandler
     {

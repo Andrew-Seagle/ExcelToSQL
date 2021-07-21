@@ -1,11 +1,12 @@
 ﻿using ExcelToSQL.TableClasses;
 using System;
 using ExcelToSQL.ExcelClasses;
-using ExcelToSQL.SQLClasses;
+using ExcelToSQL.MySQLClasses;
 using System.Linq;
 using ExcelToSQL.TableClasses.for_the_king.Abilities;
 using System.Collections.Generic;
 using ExcelToSQL.TableClasses.for_the_king.Characters;
+using TopologicalSorter;
 
 namespace ExcelToSQL
 {
@@ -13,6 +14,21 @@ namespace ExcelToSQL
     {
         static void Main(string[] args)
         {
+            var keyArray = new object[] { "two", "three", "five", "seven", "eight", "nine", "ten", "eleven" };
+
+            var arraytest = new int[,] {
+                {0,0,0,0,0,0,0,1},
+                {0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0},
+                {0,1,0,1,0,0,0,0},
+                {0,0,0,0,1,0,0,1},
+                {0,1,0,0,0,0,0,1},
+                {0,0,1,1,0,0,0,0},
+            };
+
+            var final = TSorter.Sort(arraytest,keyArray,false);
+
             var config = new ExcelConfig("ExcelFilesSheetInfo.json");
             var abilsEx = new ExcelFile(config, "for_the_king", "FTKAbilitiesSQLTables.xlsx");
 

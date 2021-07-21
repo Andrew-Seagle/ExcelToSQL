@@ -19,6 +19,7 @@ namespace ExcelToSQL.ExcelClasses
         public string FileName { get; set; }
         public string TableGroup { get; set; }
         public List<string> SheetNames { get; set; }
+        public List<string> ClassNames { get; set; }
 
         //TODO: Validate that file exists!
         //TODO: Validate proper config if being added manually
@@ -56,15 +57,30 @@ namespace ExcelToSQL.ExcelClasses
             SheetNames = _fileSheetData.Select(s => (string)s["SheetName"]).ToList();
 
             _sheetClasses = new Dictionary<string, string[]>();
-            foreach (string sheet in SheetNames)
+
+            foreach (var sheet in SheetNames)
             {
-                _sheetClasses.Add(sheet, _fileSheetData
-                                        .Where(s => (string)s["SheetName"] == sheet)
-                                        .Select(s => s["Classes"])
-                                        .Children()
-                                        .Select(s => (string)s)
-                                        .ToArray());
+                var classEnum = _fileSheetData.Where(s => (string)s["SheetName"] == sheet)
+                                              .Select(s => s["Classes"])
+                                              .Children()
+                                              .Select(s => (string)s);
+
+                _sheetClasses.Add(sheet, classEnum.ToArray());
             }
+
+            var tempList = new List<string>();
+
+            foreach (var entry in _sheetClasses)
+            {
+                var classArray = entry.Value;
+
+                foreach (var className in classArray)
+                {
+                    tempList.Add(className);
+                }
+            }
+
+            ClassNames = tempList.Distinct().ToList();
         }
 
         private void CheckGroupName()

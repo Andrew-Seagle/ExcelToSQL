@@ -17,4 +17,10 @@
     <Folder Include="TableClasses\for_the_king\JoiningTables\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="TopologicalSorter">
+      <HintPath>..\..\TopologicalSorter\TopologicalSorter\bin\Debug\net5.0\TopologicalSorter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

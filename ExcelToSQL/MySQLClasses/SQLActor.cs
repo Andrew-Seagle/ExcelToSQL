@@ -7,7 +7,7 @@ using ExcelToSQL.CustomAttributes;
 using Dapper;
 using ExcelToSQL.TableClasses;
 
-namespace ExcelToSQL.SQLClasses
+namespace ExcelToSQL.MySQLClasses
 {
     public class SQLActor
     {

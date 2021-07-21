@@ -2,7 +2,7 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 
-namespace ExcelToSQL.SQLClasses
+namespace ExcelToSQL.MySQLClasses
 {
     public class SQLConnection
     {
