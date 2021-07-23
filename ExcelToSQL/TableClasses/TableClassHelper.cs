@@ -54,6 +54,20 @@ namespace ExcelToSQL.TableClasses
             return classType;
         }
 
+        public static List<Type> GroupTypeSearch(List<string> classNames, string classFolder, string databaseName = "")
+        {
+            var typeList = new List<Type>();
+
+            foreach (var className in classNames)
+            {
+                var classType = Type.GetType($"{Pathing.TableNS}.{databaseName}.{classFolder}.{className}");
+
+                typeList.Add(classType);
+            }
+
+            return typeList;
+        }
+
         public static string GetClassFolder(string className, string databaseName = "", string interfaceName = "IMySQLTable")
         {
             var type = IntensiveTypeSearch(className, databaseName, interfaceName);

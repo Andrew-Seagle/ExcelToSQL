@@ -26,7 +26,8 @@ namespace ExcelToSQL.TableClasses.for_the_king.Abilities
         [SQLColumn(Key.None)]
         public int Stat_Modifier { get; set; }
 
-        [SQLColumn(Key.Foreign, "Target")]
+        [SQLColumn(Key.Foreign, "Abilities.AbilityTarget")]
+        [ExcelColumn(false, "Target")]
         public int Target_ID { get; set; }
     }
 }

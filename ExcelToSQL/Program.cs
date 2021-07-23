@@ -12,6 +12,8 @@ namespace ExcelToSQL
 {
     class Program
     {
+        // TODO: Completely gut the need for table groups. It's a big rework.
+
         static void Main(string[] args)
         {
             var keyArray = new object[] { "two", "three", "five", "seven", "eight", "nine", "ten", "eleven" };

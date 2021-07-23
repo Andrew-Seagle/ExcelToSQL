@@ -17,7 +17,7 @@ namespace ExcelToSQL.TableClasses.for_the_king.Abilities
         [ExcelColumn(true)]
         public string Name { get; set; }
 
-        [SQLColumn(Key.Foreign, "AbilitySubcategory")]
+        [SQLColumn(Key.Foreign, "Abilities.AbilitySubcategory")]
         [ExcelColumn(true)]
         public int Subcategory_ID { get; set; }
 

@@ -14,7 +14,7 @@ namespace ExcelToSQL.TableClasses.for_the_king.Abilities
         [SQLColumn(Key.Primary)]
         public int ID { get; set; }
 
-        [SQLColumn(Key.Foreign, "Ability")]
+        [SQLColumn(Key.Foreign, "Abilities.Ability")]
         public int Ability_ID { get; set; }
 
         [SQLColumn(Key.None)]

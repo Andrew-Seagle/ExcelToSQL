@@ -13,11 +13,11 @@ namespace ExcelToSQL.TableClasses.for_the_king.Abilities
         [SQLColumn(Key.Primary)]
         public int ID { get; set; }
 
-        [SQLColumn(Key.Foreign, "Ability")]
+        [SQLColumn(Key.Foreign, "Abilities.Ability")]
         [ExcelColumn(false, "Name")]
         public int Ability_ID { get; set; }
 
-        [SQLColumn(Key.Foreign, "Stat")]
+        [SQLColumn(Key.Foreign, "Stats.Stat")]
         [ExcelColumn(false, "Stat")]
         public int Stat_ID { get; set; }
 
@@ -37,7 +37,7 @@ namespace ExcelToSQL.TableClasses.for_the_king.Abilities
         [ExcelColumn(true)]
         public string Damage_Type { get; set; }
 
-        [SQLColumn(Key.Foreign, "AbilityTarget")]
+        [SQLColumn(Key.Foreign, "Abilities.AbilityTarget")]
         [ExcelColumn(false, "Target")]
         public int Target_ID { get; set; }
     }
