@@ -228,7 +228,7 @@ namespace ExcelToSQL.ExcelClasses
 
             foreach (var file in excelFiles)
             {
-                excelEnums.Add(new ExcelEnum(file));
+                //excelEnums.Add(new ExcelEnum(file));
             }
 
             return excelEnums;

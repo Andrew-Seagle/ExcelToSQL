@@ -20,6 +20,7 @@ namespace ExcelToSQL.MySQLClasses
                       .Build();
 
             _connString = _config.GetConnectionString(connectionName);
+            System.Console.WriteLine(_connString);
             MySqlConnection = new MySqlConnection(_connString);
             DatabaseName = MySqlConnection.Database;
         }

@@ -16,6 +16,8 @@ namespace ExcelToSQL
 
         static void Main(string[] args)
         {
+            var sqlActorTest = new SQLActor("for_the_king");
+
             var keyArray = new object[] { "two", "three", "five", "seven", "eight", "nine", "ten", "eleven" };
 
             var arraytest = new int[,] {
@@ -34,7 +36,7 @@ namespace ExcelToSQL
             var config = new ExcelConfig("ExcelFilesSheetInfo.json");
             var abilsEx = new ExcelFile(config, "for_the_king", "FTKAbilitiesSQLTables.xlsx");
 
-            var excelEnum = new ExcelEnum(abilsEx);
+            var excelEnum = new ExcelEnum(abilsEx, "Abilities");
 
             var singleColTesting = excelEnum.CreateEnum<SingleColumn>("Passive", "Name");
 

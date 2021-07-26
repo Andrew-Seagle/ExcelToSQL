@@ -21,8 +21,9 @@ namespace ExcelToSQL.ExcelClasses
             FolderPath = Pathing.BasePath + "ExcelFiles/";
             SheetInfoPath = Pathing.ConfigPath + ConfigSheetFile;
 
-            StreamReader reader = File.OpenText(SheetInfoPath);
-            FullJsonO = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
+            using (StreamReader reader = File.OpenText(SheetInfoPath))
+                FullJsonO = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
+
             DatabaseNames = FullJsonO.Properties().Select(j => j.Name).ToList();
             DbaseGroupFiles = new Dictionary<string, Dictionary<string, List<string>>>();
 

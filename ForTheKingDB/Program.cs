@@ -1,4 +1,5 @@
 ﻿using System;
+using ExcelToSQL.MySQLClasses;
 
 namespace ForTheKingDB
 {
@@ -6,7 +7,7 @@ namespace ForTheKingDB
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Database.AddMe();
         }
     }
 }

@@ -1,0 +1,17 @@
+{
+  "for_the_king": {
+    "server": "localhost",
+    "userId": "root",
+    "password": "password",
+    "project": {
+      "Namespace": "ForTheKingDB",
+      "Assembly": "ForTheKingDB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TablesFolder": "TableClasses"
+    }
+  },
+  "Testing2": {
+    "Halo": 9,
+    "Starcraft": 9,
+    "Call of Duty": 7.5
+  }
+}

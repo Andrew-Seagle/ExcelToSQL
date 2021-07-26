@@ -19,11 +19,11 @@ namespace ExcelToSQL.ExcelClasses
         public string TableGroup { get; }
         public List<string> ClassNames { get; set; }
 
-        public ExcelEnum(ExcelFile file)
+        public ExcelEnum(ExcelFile file, string tableGroup)
         {
             this._file = file;
             FileName = _file.FileName;
-            TableGroup = _file.TableGroup;
+            TableGroup = tableGroup;
             ClassNames = _file.ClassNames;
         }
 

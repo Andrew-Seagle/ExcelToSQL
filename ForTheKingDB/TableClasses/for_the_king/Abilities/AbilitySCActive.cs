@@ -1,5 +1,5 @@
 ﻿using ExcelToSQL.CustomAttributes;
-using ExcelToSQL.SQLClasses;
+using ExcelToSQL.MySQLClasses;
 using System.Collections.Generic;
 
 namespace ExcelToSQL.TableClasses.for_the_king.Abilities
